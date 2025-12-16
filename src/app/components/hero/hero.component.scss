@@ -1,0 +1,139 @@
+.hero {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%),
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%23d4af37" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23dots)"/></svg>');
+  background-attachment: fixed;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+  }
+
+  .hero-text {
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: #d4af37;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    .tagline {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin: 1rem 0;
+      font-weight: 300;
+      letter-spacing: 1px;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #cccccc;
+      margin: 1.5rem 0 2rem 0;
+      line-height: 1.6;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    }
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+    }
+
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+
+    .hero-text {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .tagline {
+        font-size: 1.3rem;
+      }
+
+      .subtitle {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

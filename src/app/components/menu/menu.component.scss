@@ -1,0 +1,112 @@
+.menu {
+  padding: 80px 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  > h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #d4af37;
+    margin: 0 0 3rem 0;
+    position: relative;
+    display: block;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, #d4af37 0%, #f4d03f 100%);
+      margin: 1rem auto 0;
+    }
+  }
+
+  .menu-section {
+    margin-bottom: 3rem;
+
+    > h3 {
+      font-size: 1.8rem;
+      color: #d4af37;
+      margin: 2rem 0 1.5rem 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #d4af37;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  .menu-items {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #d4af37;
+    padding: 1.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(8px);
+    }
+
+    .menu-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+
+      h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .price {
+        color: #d4af37;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: #cccccc;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 60px 2rem;
+
+    > h2 {
+      font-size: 1.8rem;
+    }
+
+    .menu-section > h3 {
+      font-size: 1.3rem;
+    }
+
+    .menu-item {
+      padding: 1rem;
+
+      .menu-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

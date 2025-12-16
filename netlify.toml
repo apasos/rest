@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/restaurant-landing",
+  "redirects": [
+    {
+      "from": "/*",
+      "to": "/index.html",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<section class="menu" id="menu">
+  <div class="container">
+    <h2>{{ translate('menuTitle') }}</h2>
+
+    <!-- Appetizers -->
+    <div class="menu-section">
+      <h3>{{ translate('appetizers') }}</h3>
+      <div class="menu-items">
+        <div class="menu-item" *ngFor="let item of appetizers">
+          <div class="menu-item-header">
+            <h4>{{ translate(item.titleKey) }}</h4>
+            <span class="price">{{ item.price }}</span>
+          </div>
+          <p>{{ translate(item.descriptionKey) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Courses -->
+    <div class="menu-section">
+      <h3>{{ translate('mainCourses') }}</h3>
+      <div class="menu-items">
+        <div class="menu-item" *ngFor="let item of mainCourses">
+          <div class="menu-item-header">
+            <h4>{{ translate(item.titleKey) }}</h4>
+            <span class="price">{{ item.price }}</span>
+          </div>
+          <p>{{ translate(item.descriptionKey) }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-section">
+      <h3>{{ translate('desserts') }}</h3>
+      <div class="menu-items">
+        <div class="menu-item" *ngFor="let item of desserts">
+          <div class="menu-item-header">
+            <h4>{{ translate(item.titleKey) }}</h4>
+            <span class="price">{{ item.price }}</span>
+          </div>
+          <p>{{ translate(item.descriptionKey) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

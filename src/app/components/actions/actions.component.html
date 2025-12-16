@@ -1,0 +1,35 @@
+<section class="actions" id="actions">
+  <div class="container">
+    <h2>{{ translate('contactUs') }}</h2>
+    <p class="subtitle">{{ translate('subtitle') }}</p>
+
+    <div class="actions-grid">
+      <div class="action-card">
+        <div class="icon">📖</div>
+        <h3>{{ translate('viewMenu') }}</h3>
+        <p>{{ translate('menuTitle') }}</p>
+        <button class="action-btn" (click)="handleViewMenu()">
+          {{ translate('menu') }}
+        </button>
+      </div>
+
+      <div class="action-card">
+        <div class="icon">📅</div>
+        <h3>{{ translate('makeReservation') }}</h3>
+        <p>{{ translate('reserve') }}</p>
+        <button class="action-btn primary" (click)="handleReservation()">
+          {{ translate('reserve') }}
+        </button>
+      </div>
+
+      <div class="action-card">
+        <div class="icon">🍾</div>
+        <h3>{{ translate('rentCavaSection') }}</h3>
+        <p>{{ translate('cavaManagement') }}</p>
+        <button class="action-btn" (click)="handleRentCava()">
+          {{ translate('rentCava') }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
