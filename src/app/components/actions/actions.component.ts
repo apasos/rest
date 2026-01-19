@@ -21,7 +21,7 @@ export class ActionsComponent {
   }
 
   handleRentCava(): void {
-    alert(this.translate('rentCavaSection') + ' - Feature coming soon!');
+    window.location.href = 'https://kavasoft.duckdns.org/company/rent/1';
   }
 
   handleViewMenu(): void {
